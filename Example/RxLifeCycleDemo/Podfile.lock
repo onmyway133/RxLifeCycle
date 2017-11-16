@@ -1,0 +1,16 @@
+PODS:
+  - RxLifeCycle (0.1.0)
+
+DEPENDENCIES:
+  - RxLifeCycle (from `../../`)
+
+EXTERNAL SOURCES:
+  RxLifeCycle:
+    :path: ../../
+
+SPEC CHECKSUMS:
+  RxLifeCycle: 95db118ca3bc72ff5fbe42a657caa47a2c2a9b89
+
+PODFILE CHECKSUM: 6ac3acffbe37833ea2f746470523b62d05a63cd7
+
+COCOAPODS: 1.3.1
