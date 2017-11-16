@@ -1,6 +1,7 @@
 import UIKit
 import RxSwift
 
+/// Observe UIViewController life cycle events
 public class ViewControllerLifeCycle {
   public var viewDidLoad: Observable<Void> {
     return dummyViewController.viewDidLoadSubject
@@ -22,8 +23,10 @@ public class ViewControllerLifeCycle {
     return dummyViewController.viewDidDisappearSubject
   }
 
+  // Use a dummy UIViewController to get forwarded events from container view controller
   private let dummyViewController: DummyViewController
 
+  /// Add a dummy view controller so that it can forward events
   public init(viewController: UIViewController) {
     dummyViewController = DummyViewController()
 

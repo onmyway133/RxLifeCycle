@@ -1,6 +1,7 @@
 import UIKit
 import RxSwift
 
+/// Observe events of UIApplicationDelegate
 public class AppDelegateLifeCycle {
   public var didBecomeActive: Observable<Void> {
     return observer.didBecomeActiveSubject
