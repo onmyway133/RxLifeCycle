@@ -1,5 +1,10 @@
 PODS:
-  - RxLifeCycle (0.1.0)
+  - RxCocoa (4.0.0):
+    - RxSwift (~> 4.0)
+  - RxLifeCycle (1.0.0):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.0.0)
 
 DEPENDENCIES:
   - RxLifeCycle (from `../../`)
@@ -9,7 +14,9 @@ EXTERNAL SOURCES:
     :path: ../../
 
 SPEC CHECKSUMS:
-  RxLifeCycle: 95db118ca3bc72ff5fbe42a657caa47a2c2a9b89
+  RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
+  RxLifeCycle: 089646b41a2bdfc4b1a1289834614eeabb8b4eb2
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
 
 PODFILE CHECKSUM: 6ac3acffbe37833ea2f746470523b62d05a63cd7
 
