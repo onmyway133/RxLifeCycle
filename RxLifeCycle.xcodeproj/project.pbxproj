@@ -18,6 +18,12 @@
 		D2876C5E1FBDF7AC0096E736 /* Rx+AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2876C5C1FBDF7AC0096E736 /* Rx+AppDelegate.swift */; };
 		D2876C601FBDF7B30096E736 /* Rx+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2876C5F1FBDF7B30096E736 /* Rx+ViewController.swift */; };
 		D2876C611FBDF7B30096E736 /* Rx+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2876C5F1FBDF7B30096E736 /* Rx+ViewController.swift */; };
+		D2876C631FBDFD610096E736 /* ViewControllerLifeCycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2876C621FBDFD610096E736 /* ViewControllerLifeCycleTests.swift */; };
+		D2876C641FBDFD610096E736 /* ViewControllerLifeCycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2876C621FBDFD610096E736 /* ViewControllerLifeCycleTests.swift */; };
+		D2876C651FBDFE060096E736 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2876C581FBDF3130096E736 /* RxSwift.framework */; };
+		D2876C671FBDFE100096E736 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2876C661FBDFE100096E736 /* RxCocoa.framework */; };
+		D2876C681FBDFE270096E736 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2876C5A1FBDF31C0096E736 /* RxSwift.framework */; };
+		D2876C6A1FBDFE280096E736 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2876C691FBDFE270096E736 /* RxCocoa.framework */; };
 		D5B2E8AA1C3A780C00C0327D /* RxLifeCycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* RxLifeCycle.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +57,9 @@
 		D2876C5A1FBDF31C0096E736 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/tvOS/RxSwift.framework; sourceTree = "<group>"; };
 		D2876C5C1FBDF7AC0096E736 /* Rx+AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+AppDelegate.swift"; sourceTree = "<group>"; };
 		D2876C5F1FBDF7B30096E736 /* Rx+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+ViewController.swift"; sourceTree = "<group>"; };
+		D2876C621FBDFD610096E736 /* ViewControllerLifeCycleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLifeCycleTests.swift; sourceTree = "<group>"; };
+		D2876C661FBDFE100096E736 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		D2876C691FBDFE270096E736 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/tvOS/RxCocoa.framework; sourceTree = "<group>"; };
 		D5B2E89F1C3A780C00C0327D /* RxLifeCycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxLifeCycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B2E8A91C3A780C00C0327D /* RxLifeCycle-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RxLifeCycle-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -68,6 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2876C6A1FBDFE280096E736 /* RxCocoa.framework in Frameworks */,
+				D2876C681FBDFE270096E736 /* RxSwift.framework in Frameworks */,
 				D284B1051F79038B00D94AF3 /* RxLifeCycle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,6 +95,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2876C671FBDFE100096E736 /* RxCocoa.framework in Frameworks */,
+				D2876C651FBDFE060096E736 /* RxSwift.framework in Frameworks */,
 				D5B2E8AA1C3A780C00C0327D /* RxLifeCycle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +116,8 @@
 		D2876C571FBDF3120096E736 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D2876C661FBDFE100096E736 /* RxCocoa.framework */,
+				D2876C691FBDFE270096E736 /* RxCocoa.framework */,
 				D2876C5A1FBDF31C0096E736 /* RxSwift.framework */,
 				D2876C581FBDF3130096E736 /* RxSwift.framework */,
 			);
@@ -147,6 +162,7 @@
 			children = (
 				D284B12F1F7906DA00D94AF3 /* Info-iOS-Tests.plist */,
 				D284B1301F7906DA00D94AF3 /* Info-tvOS-Tests.plist */,
+				D2876C621FBDFD610096E736 /* ViewControllerLifeCycleTests.swift */,
 			);
 			path = RxLifeCycleTests;
 			sourceTree = "<group>";
@@ -260,7 +276,7 @@
 					};
 					D284B1031F79038B00D94AF3 = {
 						CreatedOnToolsVersion = 9.0;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					D5B2E89E1C3A780C00C0327D = {
@@ -269,7 +285,7 @@
 					};
 					D5B2E8A81C3A780C00C0327D = {
 						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 0910;
 					};
 				};
 			};
@@ -340,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2876C641FBDFD610096E736 /* ViewControllerLifeCycleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2876C631FBDFD610096E736 /* ViewControllerLifeCycleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +474,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "$(SRCROOT)/RxLifeCycleTests/Info-tvOS-Tests.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
@@ -481,6 +503,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "$(SRCROOT)/RxLifeCycleTests/Info-tvOS-Tests.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
