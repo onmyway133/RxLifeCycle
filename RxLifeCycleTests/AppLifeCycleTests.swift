@@ -16,6 +16,8 @@ class AppLifeCycleTests: XCTestCase {
     lifeCycle = nil
   }
 
+  // MARK: - Using AppLifeCycle manually
+
   func testDidBecomeActive() {
     let expectation = self.expectation(description: #function)
 
@@ -70,6 +72,23 @@ class AppLifeCycleTests: XCTestCase {
 
     NotificationCenter.default.post(
       name: Notification.Name.UIApplicationWillEnterForeground,
+      object: UIApplication.shared
+    )
+
+    wait(for: [expectation], timeout: 1)
+  }
+
+  // MARK: - Using rx
+
+  func testDidBecomeActiveUsingRx() {
+    let expectation = self.expectation(description: #function)
+
+    _ = UIApplication.shared.rx.lifeCycle.didBecomeActive.subscribe(onNext: {
+      expectation.fulfill()
+    })
+
+    NotificationCenter.default.post(
+      name: Notification.Name.UIApplicationDidBecomeActive,
       object: UIApplication.shared
     )
 

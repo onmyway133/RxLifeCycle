@@ -4,8 +4,9 @@ import RxCocoa
 
 fileprivate var appLifeCycleKey = "appLifeCycleKey"
 
-/// Generic extension does not seem to work for protocol
-public extension Reactive where Base: UIApplicationDelegate {
+public extension Reactive where Base: UIApplication {
+
+  /// Use lifeCycle to observe many events related to UIApplicationDelegate
   public var lifeCycle: AppLifeCycle {
     if let lifeCycle = objc_getAssociatedObject(self, &appLifeCycleKey) as? AppLifeCycle {
       return lifeCycle
