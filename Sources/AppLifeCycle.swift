@@ -2,7 +2,7 @@ import UIKit
 import RxSwift
 
 /// Observe events of UIApplicationDelegate
-public class AppDelegateLifeCycle {
+public class AppLifeCycle {
   public var didBecomeActive: Observable<Void> {
     return observer.didBecomeActiveSubject
   }
@@ -26,7 +26,7 @@ public class AppDelegateLifeCycle {
   }
 }
 
-private extension AppDelegateLifeCycle {
+private extension AppLifeCycle {
   class Observer {
     let didBecomeActiveSubject = PublishSubject<Void>()
     let willResignActiveSubject = PublishSubject<Void>()

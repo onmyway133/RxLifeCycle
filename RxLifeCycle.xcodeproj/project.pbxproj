@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D284B1051F79038B00D94AF3 /* RxLifeCycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D284B0FC1F79038B00D94AF3 /* RxLifeCycle.framework */; };
-		D2876C521FBDF1E90096E736 /* AppDelegateLifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2876C511FBDF1E90096E736 /* AppDelegateLifeCycle.swift */; };
-		D2876C531FBDF1E90096E736 /* AppDelegateLifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2876C511FBDF1E90096E736 /* AppDelegateLifeCycle.swift */; };
+		D2876C521FBDF1E90096E736 /* AppLifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2876C511FBDF1E90096E736 /* AppLifeCycle.swift */; };
+		D2876C531FBDF1E90096E736 /* AppLifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2876C511FBDF1E90096E736 /* AppLifeCycle.swift */; };
 		D2876C551FBDF1FF0096E736 /* ViewControllerLifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2876C541FBDF1FF0096E736 /* ViewControllerLifeCycle.swift */; };
 		D2876C561FBDF1FF0096E736 /* ViewControllerLifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2876C541FBDF1FF0096E736 /* ViewControllerLifeCycle.swift */; };
 		D2876C591FBDF3130096E736 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2876C581FBDF3130096E736 /* RxSwift.framework */; };
@@ -45,7 +45,7 @@
 		D284B1301F7906DA00D94AF3 /* Info-tvOS-Tests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS-Tests.plist"; sourceTree = "<group>"; };
 		D284B1401F79081F00D94AF3 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		D284B1421F79081F00D94AF3 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
-		D2876C511FBDF1E90096E736 /* AppDelegateLifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateLifeCycle.swift; sourceTree = "<group>"; };
+		D2876C511FBDF1E90096E736 /* AppLifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLifeCycle.swift; sourceTree = "<group>"; };
 		D2876C541FBDF1FF0096E736 /* ViewControllerLifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLifeCycle.swift; sourceTree = "<group>"; };
 		D2876C581FBDF3130096E736 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		D2876C5A1FBDF31C0096E736 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/tvOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 		D5C629691C3A809D007F7B7C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				D2876C511FBDF1E90096E736 /* AppDelegateLifeCycle.swift */,
+				D2876C511FBDF1E90096E736 /* AppLifeCycle.swift */,
 				D2876C541FBDF1FF0096E736 /* ViewControllerLifeCycle.swift */,
 				D2876C5C1FBDF7AC0096E736 /* Rx+AppDelegate.swift */,
 				D2876C5F1FBDF7B30096E736 /* Rx+ViewController.swift */,
@@ -329,7 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2876C531FBDF1E90096E736 /* AppDelegateLifeCycle.swift in Sources */,
+				D2876C531FBDF1E90096E736 /* AppLifeCycle.swift in Sources */,
 				D2876C561FBDF1FF0096E736 /* ViewControllerLifeCycle.swift in Sources */,
 				D2876C611FBDF7B30096E736 /* Rx+ViewController.swift in Sources */,
 				D2876C5E1FBDF7AC0096E736 /* Rx+AppDelegate.swift in Sources */,
@@ -347,7 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2876C521FBDF1E90096E736 /* AppDelegateLifeCycle.swift in Sources */,
+				D2876C521FBDF1E90096E736 /* AppLifeCycle.swift in Sources */,
 				D2876C551FBDF1FF0096E736 /* ViewControllerLifeCycle.swift in Sources */,
 				D2876C601FBDF7B30096E736 /* Rx+ViewController.swift in Sources */,
 				D2876C5D1FBDF7AC0096E736 /* Rx+AppDelegate.swift in Sources */,
