@@ -1,1 +1,1 @@
-# https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#example-cartfile
+github "ReactiveX/RxSwift" ~> 4.0
