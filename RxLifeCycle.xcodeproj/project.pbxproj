@@ -12,6 +12,8 @@
 		D2876C531FBDF1E90096E736 /* AppDelegateLifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2876C511FBDF1E90096E736 /* AppDelegateLifeCycle.swift */; };
 		D2876C551FBDF1FF0096E736 /* ViewControllerLifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2876C541FBDF1FF0096E736 /* ViewControllerLifeCycle.swift */; };
 		D2876C561FBDF1FF0096E736 /* ViewControllerLifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2876C541FBDF1FF0096E736 /* ViewControllerLifeCycle.swift */; };
+		D2876C591FBDF3130096E736 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2876C581FBDF3130096E736 /* RxSwift.framework */; };
+		D2876C5B1FBDF31C0096E736 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2876C5A1FBDF31C0096E736 /* RxSwift.framework */; };
 		D5B2E8AA1C3A780C00C0327D /* RxLifeCycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* RxLifeCycle.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		D284B1421F79081F00D94AF3 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		D2876C511FBDF1E90096E736 /* AppDelegateLifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateLifeCycle.swift; sourceTree = "<group>"; };
 		D2876C541FBDF1FF0096E736 /* ViewControllerLifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLifeCycle.swift; sourceTree = "<group>"; };
+		D2876C581FBDF3130096E736 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		D2876C5A1FBDF31C0096E736 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/tvOS/RxSwift.framework; sourceTree = "<group>"; };
 		D5B2E89F1C3A780C00C0327D /* RxLifeCycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxLifeCycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B2E8A91C3A780C00C0327D /* RxLifeCycle-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RxLifeCycle-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -50,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2876C5B1FBDF31C0096E736 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2876C591FBDF3130096E736 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +94,15 @@
 			path = Info;
 			sourceTree = "<group>";
 		};
+		D2876C571FBDF3120096E736 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2876C5A1FBDF31C0096E736 /* RxSwift.framework */,
+				D2876C581FBDF3130096E736 /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D5B2E8951C3A780C00C0327D = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +110,7 @@
 				D5C629691C3A809D007F7B7C /* Sources */,
 				D5C6298F1C3A8BDA007F7B7C /* RxLifeCycleTests */,
 				D5B2E8A01C3A780C00C0327D /* Products */,
+				D2876C571FBDF3120096E736 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -364,6 +380,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "$(SRCROOT)/Info/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -395,6 +415,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "$(SRCROOT)/Info/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -574,6 +598,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -595,6 +623,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
