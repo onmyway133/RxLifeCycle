@@ -3,8 +3,9 @@ import RxLifeCycle
 
 class ViewControllerLifeCycleTests: XCTestCase {
   func testViewDidLoad() {
-    let viewController = UIViewController()
     let expectation = self.expectation(description: #function)
+    let viewController = UIViewController()
+
     _ = viewController.rx.lifeCycle.viewDidLoad.subscribe(onNext: {
       expectation.fulfill()
     })
@@ -13,8 +14,9 @@ class ViewControllerLifeCycleTests: XCTestCase {
   }
 
   func testViewWillAppear() {
-    let viewController = UIViewController()
     let expectation = self.expectation(description: #function)
+    let viewController = UIViewController()
+
     _ = viewController.rx.lifeCycle.viewWillAppear.subscribe(onNext: {
       expectation.fulfill()
     })
@@ -24,8 +26,9 @@ class ViewControllerLifeCycleTests: XCTestCase {
   }
 
   func testViewDidAppear() {
-    let viewController = UIViewController()
     let expectation = self.expectation(description: #function)
+    let viewController = UIViewController()
+
     _ = viewController.rx.lifeCycle.viewDidAppear.subscribe(onNext: {
       expectation.fulfill()
     })
@@ -35,8 +38,9 @@ class ViewControllerLifeCycleTests: XCTestCase {
   }
 
   func testViewWillDisappear() {
-    let viewController = UIViewController()
     let expectation = self.expectation(description: #function)
+    let viewController = UIViewController()
+
     _ = viewController.rx.lifeCycle.viewWillDisappear.subscribe(onNext: {
       expectation.fulfill()
     })
@@ -46,8 +50,9 @@ class ViewControllerLifeCycleTests: XCTestCase {
   }
 
   func testViewDidDisappear() {
-    let viewController = UIViewController()
     let expectation = self.expectation(description: #function)
+    let viewController = UIViewController()
+
     _ = viewController.rx.lifeCycle.viewDidDisappear.subscribe(onNext: {
       expectation.fulfill()
     })
