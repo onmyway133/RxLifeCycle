@@ -17,6 +17,8 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source_files = 'Sources/**/*'
   s.dependency 'RxSwift', '~> 4.0'
+  s.dependency 'RxCocoa', '~> 4.0'
+
 
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
 end
