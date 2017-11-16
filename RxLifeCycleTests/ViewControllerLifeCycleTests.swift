@@ -2,7 +2,33 @@ import XCTest
 import RxLifeCycle
 
 class ViewControllerLifeCycleTests: XCTestCase {
-  func testViewDidLoad() {
+
+  var lifeCycle: ViewControllerLifeCycle!
+
+  override func tearDown() {
+    super.tearDown()
+
+    lifeCycle = nil
+  }
+
+  // MARK: - Using ViewControllerLifeCycle manually
+
+  func testViewWillAppear() {
+    let expectation = self.expectation(description: #function)
+    let viewController = UIViewController()
+    lifeCycle = ViewControllerLifeCycle(viewController: viewController)
+
+    _ = lifeCycle.viewWillAppear.subscribe(onNext: {
+      expectation.fulfill()
+    })
+
+    viewController.viewWillAppear(true)
+    wait(for: [expectation], timeout: 1)
+  }
+
+  // MARK: - Using rx
+
+  func testViewDidLoadUsingRx() {
     let expectation = self.expectation(description: #function)
     let viewController = UIViewController()
 
@@ -13,7 +39,7 @@ class ViewControllerLifeCycleTests: XCTestCase {
     wait(for: [expectation], timeout: 1)
   }
 
-  func testViewWillAppear() {
+  func testViewWillAppearUsingRx() {
     let expectation = self.expectation(description: #function)
     let viewController = UIViewController()
 
@@ -25,7 +51,7 @@ class ViewControllerLifeCycleTests: XCTestCase {
     wait(for: [expectation], timeout: 1)
   }
 
-  func testViewDidAppear() {
+  func testViewDidAppearUsingRx() {
     let expectation = self.expectation(description: #function)
     let viewController = UIViewController()
 
@@ -37,7 +63,7 @@ class ViewControllerLifeCycleTests: XCTestCase {
     wait(for: [expectation], timeout: 1)
   }
 
-  func testViewWillDisappear() {
+  func testViewWillDisappearUsingRx() {
     let expectation = self.expectation(description: #function)
     let viewController = UIViewController()
 
@@ -49,7 +75,7 @@ class ViewControllerLifeCycleTests: XCTestCase {
     wait(for: [expectation], timeout: 1)
   }
 
-  func testViewDidDisappear() {
+  func testViewDidDisappearUsingRx() {
     let expectation = self.expectation(description: #function)
     let viewController = UIViewController()
 
