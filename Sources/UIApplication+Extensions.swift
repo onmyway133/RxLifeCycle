@@ -4,10 +4,10 @@ import RxCocoa
 
 fileprivate var appLifeCycleKey = "appLifeCycleKey"
 
-public extension Reactive where Base: UIApplication {
+public extension UIApplication {
 
   /// Use lifeCycle to observe many events related to UIApplicationDelegate
-  public var lifeCycle: AppLifeCycle {
+  public var rxLifeCycle: AppLifeCycle {
     if let lifeCycle = objc_getAssociatedObject(self, &appLifeCycleKey) as? AppLifeCycle {
       return lifeCycle
     }

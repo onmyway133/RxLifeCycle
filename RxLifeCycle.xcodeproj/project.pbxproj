@@ -13,10 +13,10 @@
 		D2876C561FBDF1FF0096E736 /* ViewControllerLifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2876C541FBDF1FF0096E736 /* ViewControllerLifeCycle.swift */; };
 		D2876C591FBDF3130096E736 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2876C581FBDF3130096E736 /* RxSwift.framework */; };
 		D2876C5B1FBDF31C0096E736 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2876C5A1FBDF31C0096E736 /* RxSwift.framework */; };
-		D2876C5D1FBDF7AC0096E736 /* UIApplication+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2876C5C1FBDF7AC0096E736 /* UIApplication+Rx.swift */; };
-		D2876C5E1FBDF7AC0096E736 /* UIApplication+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2876C5C1FBDF7AC0096E736 /* UIApplication+Rx.swift */; };
-		D2876C601FBDF7B30096E736 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2876C5F1FBDF7B30096E736 /* UIViewController+Rx.swift */; };
-		D2876C611FBDF7B30096E736 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2876C5F1FBDF7B30096E736 /* UIViewController+Rx.swift */; };
+		D2876C5D1FBDF7AC0096E736 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2876C5C1FBDF7AC0096E736 /* UIApplication+Extensions.swift */; };
+		D2876C5E1FBDF7AC0096E736 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2876C5C1FBDF7AC0096E736 /* UIApplication+Extensions.swift */; };
+		D2876C601FBDF7B30096E736 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2876C5F1FBDF7B30096E736 /* UIViewController+Extensions.swift */; };
+		D2876C611FBDF7B30096E736 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2876C5F1FBDF7B30096E736 /* UIViewController+Extensions.swift */; };
 		D2876C631FBDFD610096E736 /* ViewControllerLifeCycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2876C621FBDFD610096E736 /* ViewControllerLifeCycleTests.swift */; };
 		D2876C651FBDFE060096E736 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2876C581FBDF3130096E736 /* RxSwift.framework */; };
 		D2876C671FBDFE100096E736 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2876C661FBDFE100096E736 /* RxCocoa.framework */; };
@@ -56,8 +56,8 @@
 		D2876C541FBDF1FF0096E736 /* ViewControllerLifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLifeCycle.swift; sourceTree = "<group>"; };
 		D2876C581FBDF3130096E736 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		D2876C5A1FBDF31C0096E736 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/tvOS/RxSwift.framework; sourceTree = "<group>"; };
-		D2876C5C1FBDF7AC0096E736 /* UIApplication+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Rx.swift"; sourceTree = "<group>"; };
-		D2876C5F1FBDF7B30096E736 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		D2876C5C1FBDF7AC0096E736 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
+		D2876C5F1FBDF7B30096E736 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		D2876C621FBDFD610096E736 /* ViewControllerLifeCycleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLifeCycleTests.swift; sourceTree = "<group>"; };
 		D2876C661FBDFE100096E736 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		D2876C691FBDFE270096E736 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/tvOS/RxCocoa.framework; sourceTree = "<group>"; };
@@ -171,8 +171,8 @@
 			children = (
 				D2876C511FBDF1E90096E736 /* AppLifeCycle.swift */,
 				D2876C541FBDF1FF0096E736 /* ViewControllerLifeCycle.swift */,
-				D2876C5C1FBDF7AC0096E736 /* UIApplication+Rx.swift */,
-				D2876C5F1FBDF7B30096E736 /* UIViewController+Rx.swift */,
+				D2876C5C1FBDF7AC0096E736 /* UIApplication+Extensions.swift */,
+				D2876C5F1FBDF7B30096E736 /* UIViewController+Extensions.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -372,8 +372,8 @@
 			files = (
 				D2876C531FBDF1E90096E736 /* AppLifeCycle.swift in Sources */,
 				D2876C561FBDF1FF0096E736 /* ViewControllerLifeCycle.swift in Sources */,
-				D2876C611FBDF7B30096E736 /* UIViewController+Rx.swift in Sources */,
-				D2876C5E1FBDF7AC0096E736 /* UIApplication+Rx.swift in Sources */,
+				D2876C611FBDF7B30096E736 /* UIViewController+Extensions.swift in Sources */,
+				D2876C5E1FBDF7AC0096E736 /* UIApplication+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,8 +392,8 @@
 			files = (
 				D2876C521FBDF1E90096E736 /* AppLifeCycle.swift in Sources */,
 				D2876C551FBDF1FF0096E736 /* ViewControllerLifeCycle.swift in Sources */,
-				D2876C601FBDF7B30096E736 /* UIViewController+Rx.swift in Sources */,
-				D2876C5D1FBDF7AC0096E736 /* UIApplication+Rx.swift in Sources */,
+				D2876C601FBDF7B30096E736 /* UIViewController+Extensions.swift in Sources */,
+				D2876C5D1FBDF7AC0096E736 /* UIApplication+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,7 +15,7 @@ class ViewControllerLifeCycleTests: XCTestCase {
 
   func testViewWillAppear() {
     let expectation = self.expectation(description: #function)
-    let viewController = UIViewController()
+    let viewController = UIApplication.shared.delegate!.window!!.rootViewController!
     lifeCycle = ViewControllerLifeCycle(viewController: viewController)
 
     _ = lifeCycle.viewWillAppear.subscribe(onNext: {
@@ -32,7 +32,7 @@ class ViewControllerLifeCycleTests: XCTestCase {
     let expectation = self.expectation(description: #function)
     let viewController = UIViewController()
 
-    _ = viewController.rx.lifeCycle.viewDidLoad.subscribe(onNext: {
+    _ = viewController.rxLifeCycle.viewDidLoad.subscribe(onNext: {
       expectation.fulfill()
     })
 
@@ -43,7 +43,7 @@ class ViewControllerLifeCycleTests: XCTestCase {
     let expectation = self.expectation(description: #function)
     let viewController = UIViewController()
 
-    _ = viewController.rx.lifeCycle.viewWillAppear.subscribe(onNext: {
+    _ = viewController.rxLifeCycle.viewWillAppear.subscribe(onNext: {
       expectation.fulfill()
     })
 
@@ -55,7 +55,7 @@ class ViewControllerLifeCycleTests: XCTestCase {
     let expectation = self.expectation(description: #function)
     let viewController = UIViewController()
 
-    _ = viewController.rx.lifeCycle.viewDidAppear.subscribe(onNext: {
+    _ = viewController.rxLifeCycle.viewDidAppear.subscribe(onNext: {
       expectation.fulfill()
     })
 
@@ -67,7 +67,7 @@ class ViewControllerLifeCycleTests: XCTestCase {
     let expectation = self.expectation(description: #function)
     let viewController = UIViewController()
 
-    _ = viewController.rx.lifeCycle.viewWillDisappear.subscribe(onNext: {
+    _ = viewController.rxLifeCycle.viewWillDisappear.subscribe(onNext: {
       expectation.fulfill()
     })
 
@@ -79,7 +79,7 @@ class ViewControllerLifeCycleTests: XCTestCase {
     let expectation = self.expectation(description: #function)
     let viewController = UIViewController()
 
-    _ = viewController.rx.lifeCycle.viewDidDisappear.subscribe(onNext: {
+    _ = viewController.rxLifeCycle.viewDidDisappear.subscribe(onNext: {
       expectation.fulfill()
     })
 

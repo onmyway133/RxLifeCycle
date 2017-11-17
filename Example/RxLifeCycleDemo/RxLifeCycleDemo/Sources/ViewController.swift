@@ -11,12 +11,16 @@ class ViewController: UIViewController {
 
     view.backgroundColor = .white
 
-    _ = rx.lifeCycle.viewWillAppear.subscribe(onNext: {
+    _ = lifeCycle.viewWillAppear.subscribe(onNext: {
       print("viewWillAppear")
     })
 
-    _ = rx.lifeCycle.viewDidAppear.subscribe(onNext: {
+    _ = lifeCycle.viewDidAppear.subscribe(onNext: {
       print("viewDidAppear")
+    })
+
+    _ = UIApplication.shared.lifeCycle.didEnterBackground.subscribe(onNext: {
+      print("didEnterBackground")
     })
 
     _ = appLifeCycle.didEnterBackground.subscribe(onNext: {

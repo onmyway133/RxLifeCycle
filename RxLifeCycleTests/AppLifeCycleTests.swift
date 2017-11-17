@@ -83,7 +83,7 @@ class AppLifeCycleTests: XCTestCase {
   func testDidBecomeActiveUsingRx() {
     let expectation = self.expectation(description: #function)
 
-    _ = UIApplication.shared.rx.lifeCycle.didBecomeActive.subscribe(onNext: {
+    _ = UIApplication.shared.rxLifeCycle.didBecomeActive.subscribe(onNext: {
       expectation.fulfill()
     })
 

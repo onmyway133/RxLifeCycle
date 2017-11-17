@@ -4,15 +4,15 @@ import RxCocoa
 
 fileprivate var viewControllerLifeCycleKey = "viewControllerLifeCycleKey"
 
-public extension Reactive where Base: UIViewController {
+public extension UIViewController {
 
   /// Use lifeCycle to observe view controller life cycle events
-  public var lifeCycle: ViewControllerLifeCycle {
+  public var rxLifeCycle: ViewControllerLifeCycle {
     if let lifeCycle = objc_getAssociatedObject(self, &viewControllerLifeCycleKey) as? ViewControllerLifeCycle {
       return lifeCycle
     }
 
-    let lifeCycle = ViewControllerLifeCycle(viewController: base)
+    let lifeCycle = ViewControllerLifeCycle(viewController: self)
 
     objc_setAssociatedObject(
       self,
