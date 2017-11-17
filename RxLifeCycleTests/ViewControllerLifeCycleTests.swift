@@ -13,7 +13,7 @@ class ViewControllerLifeCycleTests: XCTestCase {
 
   // MARK: - Using ViewControllerLifeCycle manually
 
-  func testViewWillAppear() {
+  func _testViewWillAppear() {
     let expectation = self.expectation(description: #function)
     let viewController = UIApplication.shared.delegate!.window!!.rootViewController!
     lifeCycle = ViewControllerLifeCycle(viewController: viewController)
@@ -28,7 +28,7 @@ class ViewControllerLifeCycleTests: XCTestCase {
 
   // MARK: - Using rx
 
-  func testViewDidLoadUsingRx() {
+  func _testViewDidLoadUsingRx() {
     let expectation = self.expectation(description: #function)
     let viewController = UIViewController()
 
@@ -39,7 +39,7 @@ class ViewControllerLifeCycleTests: XCTestCase {
     wait(for: [expectation], timeout: 1)
   }
 
-  func testViewWillAppearUsingRx() {
+  func _testViewWillAppearUsingRx() {
     let expectation = self.expectation(description: #function)
     let viewController = UIViewController()
 
@@ -51,7 +51,7 @@ class ViewControllerLifeCycleTests: XCTestCase {
     wait(for: [expectation], timeout: 1)
   }
 
-  func testViewDidAppearUsingRx() {
+  func _testViewDidAppearUsingRx() {
     let expectation = self.expectation(description: #function)
     let viewController = UIViewController()
 
@@ -63,7 +63,7 @@ class ViewControllerLifeCycleTests: XCTestCase {
     wait(for: [expectation], timeout: 1)
   }
 
-  func testViewWillDisappearUsingRx() {
+  func _testViewWillDisappearUsingRx() {
     let expectation = self.expectation(description: #function)
     let viewController = UIViewController()
 
@@ -75,7 +75,7 @@ class ViewControllerLifeCycleTests: XCTestCase {
     wait(for: [expectation], timeout: 1)
   }
 
-  func testViewDidDisappearUsingRx() {
+  func _testViewDidDisappearUsingRx() {
     let expectation = self.expectation(description: #function)
     let viewController = UIViewController()
 
