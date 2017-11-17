@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "RxLifeCycle"
-  s.summary          = "Easy observing life cycle of AppDelegate and ViewController"
+  s.summary          = "Easy life cycle observation"
   s.version          = "1.0.0"
   s.homepage         = "https://github.com/onmyway133/RxLifeCycle"
   s.license          = 'MIT'
