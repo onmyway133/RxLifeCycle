@@ -28,7 +28,16 @@ override func viewDidLoad() {
 }
 ```
 
-One way to make observations for the life cycle is to use [sentMessage](https://github.com/ReactiveX/RxSwift/blob/f043778214c8f182018ccdfbf7f440edbe0aecc8/RxCocoa/Foundation/NSObject%2BRx.swift#L136) which involves a lot of swizzlings  😱 We shouldn't use swizzlings, it is just asking [for](https://github.com/ReactiveX/RxSwift/issues/1288) [problem](https://blog.newrelic.com/2014/04/16/right-way-to-swizzle/).
+One way to make observations for the life cycle is to use [sentMessage](https://github.com/ReactiveX/RxSwift/blob/f043778214c8f182018ccdfbf7f440edbe0aecc8/RxCocoa/Foundation/NSObject%2BRx.swift#L136) and [methodInvoked](https://github.com/ReactiveX/RxSwift/blob/f043778214c8f182018ccdfbf7f440edbe0aecc8/RxCocoa/Foundation/NSObject%2BRx.swift#L165) which involve a lot of swizzlings  😱 We shouldn't use swizzlings, it is just asking [for](https://github.com/ReactiveX/RxSwift/issues/1288) [problem](https://blog.newrelic.com/2014/04/16/right-way-to-swizzle/).
+
+```swift
+public extension Reactive where Base: UIViewController {
+  public var viewWillAppear: ControlEvent<()> {
+    let source = self.methodInvoked(#selector(Base.viewWillAppear)).mapVoid()
+    return ControlEvent(events: source)
+  }
+}
+```
 
 Instead, we can just use simple composition, that you can plug and play everywhere you want. See [demo](https://github.com/onmyway133/RxLifeCycle/tree/master/Example/RxLifeCycleDemo)
 
