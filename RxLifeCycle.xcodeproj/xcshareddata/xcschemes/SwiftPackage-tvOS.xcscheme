@@ -29,16 +29,6 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D284B1031F79038B00D94AF3"
-               BuildableName = "RxLifeCycle-tvOS-Tests.xctest"
-               BlueprintName = "RxLifeCycle-tvOS-Tests"
-               ReferencedContainer = "container:RxLifeCycle.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
