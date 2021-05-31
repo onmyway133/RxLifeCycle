@@ -41,7 +41,7 @@ private extension AppLifeCycle {
       let queue = OperationQueue.main
 
       observers.append(center.addObserver(
-        forName: Notification.Name.UIApplicationDidBecomeActive,
+        forName: UIApplication.didBecomeActiveNotification,
         object: application,
         queue: queue,
         using: { [weak self] _ in
@@ -50,7 +50,7 @@ private extension AppLifeCycle {
       ))
 
       observers.append(center.addObserver(
-        forName: Notification.Name.UIApplicationWillResignActive,
+        forName: UIApplication.willResignActiveNotification,
         object: application,
         queue: queue,
         using: { [weak self] _ in
@@ -59,7 +59,7 @@ private extension AppLifeCycle {
       ))
 
       observers.append(center.addObserver(
-        forName: Notification.Name.UIApplicationDidEnterBackground,
+        forName: UIApplication.didEnterBackgroundNotification,
         object: application,
         queue: queue,
         using: { [weak self] _ in
@@ -68,7 +68,7 @@ private extension AppLifeCycle {
       ))
 
       observers.append(center.addObserver(
-        forName: Notification.Name.UIApplicationWillEnterForeground,
+        forName: UIApplication.willEnterForegroundNotification,
         object: application,
         queue: queue,
         using: { [weak self] _ in
