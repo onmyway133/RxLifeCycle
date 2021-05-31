@@ -31,11 +31,11 @@ public class ViewControllerLifeCycle {
     dummyViewController = DummyViewController()
 
     // Add
-    viewController.addChildViewController(dummyViewController)
+    viewController.addChild(dummyViewController)
     viewController.view.addSubview(dummyViewController.view)
     dummyViewController.view.frame = .zero
     dummyViewController.view.autoresizingMask = []
-    dummyViewController.didMove(toParentViewController: viewController)
+    dummyViewController.didMove(toParent: viewController)
   }
 }
 
